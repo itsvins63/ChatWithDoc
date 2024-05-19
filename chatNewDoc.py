@@ -1,5 +1,4 @@
 import os
-from apikey import apikey
 
 import streamlit as st
 from langchain import OpenAI
@@ -11,7 +10,6 @@ from langchain.vectorstores import Chroma
 # from langchain.chains import RetrievalQA
 from langchain.chains import ConversationalRetrievalChain
 
-os.environ['OPENAI_API_KEY'] = apikey
 
 def clear_history():
     if 'history' in st.session_state:
